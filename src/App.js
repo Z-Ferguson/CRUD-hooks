@@ -22,6 +22,8 @@ const App = () => {
   };
 
   const deleteUser = id => {
+    setEditing(false);
+    
     setUsers(users.filter(user => user.id !== id));
   };
 
