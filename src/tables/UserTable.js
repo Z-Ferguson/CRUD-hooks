@@ -1,4 +1,4 @@
-import React from 'react'
+import React from "react";
 
 const UserTable = props => (
   <table>
@@ -17,7 +17,12 @@ const UserTable = props => (
             <td>{user.username}</td>
             <td>
               <button className="button muted-button">Edit</button>
-              <button className="button muted-button">Delete</button>
+              <button
+                onClick={() => props.deleteUser(user.id)}
+                className="button muted-button"
+              >
+                Delete
+              </button>
             </td>
           </tr>
         ))
@@ -28,6 +33,6 @@ const UserTable = props => (
       )}
     </tbody>
   </table>
-)
+);
 
-export default UserTable
+export default UserTable;
